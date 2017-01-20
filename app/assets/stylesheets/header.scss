@@ -1,0 +1,8 @@
+@import "variables";
+@import "mixins";
+
+header { @include sec-default();}
+
+.top-bar {
+	@include sec-default(); background-color: $dk-blue; padding:5px;
+}
