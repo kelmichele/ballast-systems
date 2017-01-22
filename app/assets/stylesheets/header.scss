@@ -3,6 +3,31 @@
 
 header { @include sec-default();}
 
-.top-bar {
-	@include sec-default(); background-color: $dk-blue; padding:5px;
+.top-bar {@include sec-default();  padding:5px; color: $white;}
+.logo-img {max-width: 200px; padding:10px 0;}
+
+
+header{
+  position: fixed;
+  padding-top:20px;
+  width: 100%;
+  // text-align: center;
+  height: auto;
+  background: transparent;
+  color: $white;
+  transition: all 0.4s ease;
+  z-index: 9999;
+
+  .logo-img-v {display: block;}
+  .logo-img-h {display: none;}
+}
+header.sticky {
+  padding-top:0px;
+  height: 100px;
+  background: rgba($white, .9);
+  text-align: left;
+  padding-left: 20px;
+  border-bottom: 1px solid #ececec;
+  .logo-img-v {display: none;}
+  .logo-img-h {display: block;}
 }

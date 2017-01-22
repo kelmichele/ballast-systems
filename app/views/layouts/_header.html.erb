@@ -1,13 +1,23 @@
 <header class="header">
   <div class="top-bar">
-    <%= mail_to "info@ballasttreatmentsystems.com", encode: "hex", class: 'email' do %>
-	    info@ba<span style="display:none">hexscramblewords</span>llasttreatmentsystems.com
-	  <% end %>
+    <div class="container">
+      <div class="col-md-6">
+        <%= mail_to "info@ballasttreatmentsystems.com", encode: "hex", class: 'email' do %>
+    	    info@ba<span style="display:none">hexscramblewords</span>llasttreatmentsystems.com
+    	  <% end %>
+      </div>
+
+      <div class="col-md-3 col-md-offset-3 col-xs-12">
+          <!-- <p><%= Date.current %></p> -->
+      </div>
+    </div>
   </div>
 
   <div class="main-header">
+    <div class="container">
 	    <div class="col-md-3 logo-block">
-	        <%= link_to(image_tag( 'logo.jpg', alt: 'Ballast Treatment Systems Logo', class: 'img-responsive logo-img'), root_path ) %>
+        <!-- <%= link_to(image_tag( 'ballast-logo-v.png', alt: 'Ballast Treatment Systems Logo', class: 'img-responsive logo-img-v'), root_path ) %>  -->
+	      <%= link_to(image_tag( 'ballast-logo-h.png', alt: 'Ballast Treatment Systems Logo', class: 'img-responsive logo-img'), root_path ) %>
 	    </div>
 
 	    <div class="col-md-9 mega-tab">
@@ -21,4 +31,8 @@
           <span></span>
       </a>
     </div>
+  </div>
 </header>
+<!-- Date.strptime('03-02-2001', '%d-%m-%Y') -->
+
+<!-- <img src="large-image.jpg" width="782" height="2000" alt="Big Image" /> -->

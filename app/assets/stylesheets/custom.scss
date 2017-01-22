@@ -23,5 +23,20 @@ a:hover {text-decoration: none;}
 	.no-rpadding-xs {padding-right:0;}
 }
 
-body {font-size: 15px;}
-.main {@include sec-default(); padding: 50px 0;}
+body {@include sec-default();@include sec-bgimage(); background-image: url(image_path('cargo3-bw.jpg'));background-position: center center; font-size: 15px;
+	background-attachment: fixed;
+}
+// .main {@include sec-default(); padding:40px 0;}
+
+
+footer {
+	@include sec-default(); background-color: $dk-blue; padding:15px;
+	color: $white;
+}
+
+
+h1, h2, h3, h4, h5, p {line-height: 1.5em; font-family: $open;}
+h1 {font-size: 40px;}
+h2 {font-size: 25px;}
+h3 {font-size: 22px;}
+h4 {font-size: 18px;}

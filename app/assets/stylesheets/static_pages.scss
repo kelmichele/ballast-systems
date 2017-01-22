@@ -3,3 +3,77 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "variables";
 @import "mixins";
+
+.home {
+	.main {@include sec-default();}
+	.home-hero {height:450px;
+		// @include sec-default(); height:500px; @include sec-bgimage(); background-image: url(image_path('cargo3.jpg'));
+		// .hero-container {margin-top:15%;}
+	}
+
+	h1.site-header {text-align: center; font-family: $open; font-weight: 800; text-transform: uppercase;}
+
+	.section1 {
+		@include sec-default ();
+		margin-top:-5%;
+
+		h2 {font-size: 30px; text-align: center;}
+
+		.ballast-block {
+			@include sec-default();
+			@include sec-bgimage();
+			background-image: url(image_path('shipping2.jpg'));
+			background-position: center center;
+			height:auto;
+			position: relative;
+			color:$white;
+			z-index: 0;
+
+			&::before {
+				content: '';
+				width: 100%;
+				height:100%;
+				background: rgba($dk-blue, .9);
+				position: absolute;
+				z-index: -1;
+				left: 0;
+			}
+
+			.inner {@include sec-default(); padding:20px 15px;}
+		}
+	}
+	.section1a {@include sec-default ();background-color: none;height: auto;}
+	.section1c {@include sec-default ();background-color: $blue;height: auto;}
+
+	.section1b {
+		@include sec-default ();
+		background-color: $white;
+		@include sec-bgimage();
+		background-position: top center;
+		background-image: url(image_path('ow-map.png'));
+		height: 300px;
+
+		.inside {
+			@include sec-default ();
+			height:100%;
+			background-color: rgba($white, .94);
+			@include sec-bgimage();
+
+			h2.header {font-weight: 800; text-transform: uppercase;padding-bottom:40px;text-align: center;}
+			h4 {}
+			// background-image: url(image_path('paper-map.png'));
+			// background-image: url(image_path('map-bg2.png'));
+		}
+	}
+
+	.section2 {
+		@include sec-default ();
+		background-color: $blue;
+		padding:40px 0;
+
+		.whitebox {
+			background-color: $white; padding:15px;
+		}
+	}
+
+}
