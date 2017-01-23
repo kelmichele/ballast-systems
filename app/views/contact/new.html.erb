@@ -9,21 +9,26 @@
         </div>
     </section>
 
-    <div class="main">
-
         <section class="section1a"><%= image_tag('paper.png', alt: '', class: 'img-responsive') %></section>
         <section class="section1b">
             <div class="inside">
                 <div class="container">
-                    <div class="col-md-7 col-xs-12">
-                        <h2>Locally or Internationally</h2>
-                        <h3>Ballast Treatment Systems works for you.</h3>
-                        <p>Please contact us if you need more information about your ballast water management system, or if you are ready to move forward with a custom solution designed specifically for you.</p>
+                    <div class="col-md-6 col-xs-12">
+                        <h3><span>Locally or Internationally</span><br>Ballast Treatment Systems works for you.</h3>
+                        <p>Ballast Treatment Systems is located in Mobile, Alabama, but we offer our services worldwide.
+                        Please contact us if you need more information, or if you are ready to move forward with a custom water management solution designed specifically for you.</p>
 
-                        <h3>We work with  </h3>
+                        <div class="col-md-6">
+                            <%= number_to_phone(2514068629 ,pattern: /(\d{3})(\d{3})(\d{4})$/,delimiter: ".", class: 'tel') %>
+                          </div>
+                          <div class="col-md-6">
+                            <%= mail_to "info@ballasttreatmentsystems.com", encode: "hex", class: 'email' do %>
+                              info@ba<span style="display:none">hexscramblewords</span>llasttreatmentsystems.com
+                            <% end %>
+                          </div>
                     </div>
 
-                    <div class="col-md-5 col-xs-12 formsec">
+                    <div class="col-md-5 col-md-offset-1 col-xs-12 formsec">
                         <% flash.each do |message_type, message| %>
                             <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
                         <% end %>
@@ -65,4 +70,3 @@
             </div>
         </section>
         <section class="section1c"><%= image_tag('paper-rev.png', alt: '', class: 'img-responsive') %></section>
-    </div>

@@ -37,3 +37,13 @@ header {
   header, header.sticky {position: relative; transition: none; height:auto; background-color: rgba($white, .8);}
 
 }
+
+
+.home {
+  header {
+    .logo-img {display: none;}
+    &.sticky .logo-img {display: block;}
+
+    @include bp(md) {.logo-img {display: block;}}
+  }
+}
