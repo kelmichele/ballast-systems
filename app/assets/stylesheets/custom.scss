@@ -23,8 +23,14 @@ a:hover {text-decoration: none;}
 	.no-rpadding-xs {padding-right:0;}
 }
 
-body {@include sec-default();@include sec-bgimage(); background-image: url(image_path('cargo3-bw.jpg'));background-position: center center; font-size: 15px;
+body {
+	@include sec-default();@include sec-bgimage(); background-image: url(image_path('cargo3-bw.jpg'));background-position: center center; font-size: 15px;
 	background-attachment: fixed;
+
+	@include bp(md) {
+		background-attachment: scroll;background-position: top center;
+
+	}
 }
 // .main {@include sec-default(); padding:40px 0;}
 

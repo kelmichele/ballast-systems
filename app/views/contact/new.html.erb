@@ -5,7 +5,7 @@
     <section class="contact-hero">
         <div class="container hero-container">
             <h1>Contact Us</h1>
-            <h2>Ballast Treatment Systems</h2>
+            <!-- <h2>Ballast Treatment Systems</h2> -->
         </div>
     </section>
 
@@ -13,9 +13,17 @@
 
         <section class="section1a"><%= image_tag('paper.png', alt: '', class: 'img-responsive') %></section>
         <section class="section1b">
-            <section class="inside">
+            <div class="inside">
                 <div class="container">
-                    <div class="col-md-6 col-xs-12 formsec">
+                    <div class="col-md-7 col-xs-12">
+                        <h2>Locally or Internationally</h2>
+                        <h3>Ballast Treatment Systems works for you.</h3>
+                        <p>Please contact us if you need more information about your ballast water management system, or if you are ready to move forward with a custom solution designed specifically for you.</p>
+
+                        <h3>We work with  </h3>
+                    </div>
+
+                    <div class="col-md-5 col-xs-12 formsec">
                         <% flash.each do |message_type, message| %>
                             <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
                         <% end %>
@@ -54,7 +62,7 @@
                         <% end %>
                     </div>
                 </div>
-            </section>
+            </div>
         </section>
         <section class="section1c"><%= image_tag('paper-rev.png', alt: '', class: 'img-responsive') %></section>
     </div>

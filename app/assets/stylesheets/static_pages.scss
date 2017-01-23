@@ -30,8 +30,15 @@
 
 
 .home {
-	header .logo-img {display: none;}
-	header.sticky .logo-img {display: block;}
+	header {
+		.logo-img {display: none;}
+		&.sticky .logo-img {display: block;}
+
+		@include bp(md) {.logo-img {display: block;}}
+	}
+
+
+
 	.main {@include sec-default();}
 	.home-hero {height:450px;
 		.hero-container {padding-top:15%;}
@@ -86,9 +93,11 @@
 }
 
 .contact {
-	.contact-hero {height:300px;
+	.contact-hero {height:350px;
 		.hero-container {padding-top:15%;}
+		h1 {font-weight: 800; color: $blue; text-transform: uppercase;}
 	}
 	// .contact-info {@include sec-default (); background-color: $white; margin-top: 150px; padding: 50px 0;}
 	.section1b .inside {background-color: rgba($white, .9);}
+	.section1c {background-color: $dk-blue;}
 }
