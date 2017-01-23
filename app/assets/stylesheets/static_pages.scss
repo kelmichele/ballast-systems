@@ -90,6 +90,7 @@
 	.contact-hero {height:350px;
 		.hero-container {padding-top:15%;}
 		h1 {font-weight: 800; color: $blue; text-transform: uppercase;}
+		@include bp(md) { height: 200px;}
 	}
 	// .contact-info {@include sec-default (); background-color: $white; margin-top: 150px; padding: 50px 0;}
 	.section1b .inside {background-color: rgba($white, .9);}
@@ -114,6 +115,27 @@
 	.services-hero {height:350px;
 		.hero-container {padding-top:15%;}
 		h1 {font-weight: 800; color: $blue; text-transform: uppercase;}
+		@include bp(md) { height: 200px;}
 	}
 	.section1c {background-color: $dk-blue;}
+
+	.serve { @include sec-default(); padding: 5px 10px;
+		h4 {color: $lt-blue; font-weight: bold;}
+		h4::before {
+			content: '';
+			width:15px;
+			height:30px;
+			@include sec-bgimage();
+			background-image: url(image_path('anchor-sm.png'));
+			position: absolute;
+			left:0;
+			margin-top:5px;
+		}
+		p {color: $dk-blue; margin-bottom: 5px; }
+
+		&.type h4 {margin-bottom: 0;}
+		@include bp(md) {padding: 5px 0px 0;
+			h4 {font-size: 16px; padding-left:3px;}
+		}
+	}
 }

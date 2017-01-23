@@ -41,6 +41,10 @@ footer {
 	}
 
 	p.copyright {float: right; color: $white;}
+
+	@include bp(md) {
+		padding: 5px;
+	}
 }
 
 
