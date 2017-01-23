@@ -109,8 +109,8 @@
 }
 
 .contact {
-	.contact-hero {height:200px;
+	.contact-hero {height:300px;
 		.hero-container {padding-top:15%;}
 	}
-	.contact-info {@include sec-default (); background-color: $white; margin-top: 150px; padding: 50px 0;}
+	// .contact-info {@include sec-default (); background-color: $white; margin-top: 150px; padding: 50px 0;}
 }
