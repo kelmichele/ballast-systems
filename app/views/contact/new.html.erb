@@ -1,0 +1,60 @@
+<% @page_title = "Contact" %>
+<% @page_description = "Pls." %>
+
+
+    <section class="contact-hero">
+        <div class="container hero-container">
+            <h2>Ballast Treatment Systems</h2>
+            <h1>Contact Us</h1>
+        </div>
+    </section>
+
+    <div class="main">
+
+        <section class="section1a"><%= image_tag('paper.png', alt: '', class: 'img-responsive') %></section>
+        <section class="section1b">
+            <section class="contact-info">
+                <div class="container">
+                    <div class="col-md-6 col-xs-12 formsec">
+                        <% flash.each do |message_type, message| %>
+                            <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+                        <% end %>
+                        <%= form_for @contact, url: contact_path do |contact| %>
+                            <fieldset>
+                                <div class="form-group name">
+                                    Full Name: <br>
+                                    <%= contact.text_field :name %>
+                                </div>
+
+                                <div class="form-group phone">
+                                    Phone Number: <br>
+                                    <%= contact.text_field :phone %>
+                                </div>
+
+                                <div class="form-group email">
+                                    Email address: <br>
+                                    <%= contact.email_field :email %>
+                                </div>
+
+                                <div class="form-group message">
+                                    Message: <br>
+                                    <%= contact.text_area :content %>
+                                </div>
+
+                                <div class="form-group honey">
+                                    <%= label_tag :honey %>
+                                    <%= contact.text_field :honey %>
+                                    <span class="help">Do not fill in this field. It is an anti-spam measure.</span>
+                                </div>
+
+                                <div class="form-group submit">
+                                    <%= contact.submit "Submit", :class=> "send-message" %>
+                                </div>
+                            </fieldset>
+                        <% end %>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="section1c"><%= image_tag('paper-rev.png', alt: '', class: 'img-responsive') %></section>
+    </div>

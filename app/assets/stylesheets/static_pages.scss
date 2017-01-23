@@ -3,15 +3,47 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "variables";
 @import "mixins";
+.honey {position: absolute;left: -9999px;}
+
+
+
+.section1a {@include sec-default ();background-color: none;height: auto;}
+	.section1c {@include sec-default ();background-color: $blue;height: auto;}
+
+	.section1b {
+		@include sec-default ();
+		background-color: $white;
+		@include sec-bgimage();
+		background-position: top center;
+		background-image: url(image_path('ow-map.png'));
+		height: 300px;
+
+		.inside {
+			@include sec-default ();
+			height:100%;
+			background-color: rgba($white, .94);
+			@include sec-bgimage();
+
+			h2.header {font-weight: 800; text-transform: uppercase;padding-bottom:40px;text-align: center;}
+		}
+	}
+
 
 .home {
+	header .logo-img {display: none;}
+	header.sticky .logo-img {display: block;}
 	.main {@include sec-default();}
 	.home-hero {height:450px;
 		// @include sec-default(); height:500px; @include sec-bgimage(); background-image: url(image_path('cargo3.jpg'));
-		// .hero-container {margin-top:15%;}
+		.hero-container {padding-top:15%;}
 	}
 
-	h1.site-header {text-align: center; font-family: $open; font-weight: 800; text-transform: uppercase;}
+	.site-header {@include sec-default ();
+		.anchor {width: 45px; display: inline-block;float: left;}
+		h1 {display: inline-block; margin-left: 5px; font-family: $open; font-weight: 700; text-transform: uppercase; line-height: .8em; color: $dk-blue;
+			span {font-size: 22px; font-weight: normal; color: $lt-blue;}
+		}
+	}
 
 	.section1 {
 		@include sec-default ();
@@ -42,29 +74,27 @@
 			.inner {@include sec-default(); padding:20px 15px;}
 		}
 	}
-	.section1a {@include sec-default ();background-color: none;height: auto;}
-	.section1c {@include sec-default ();background-color: $blue;height: auto;}
+	// .section1a {@include sec-default ();background-color: none;height: auto;}
+	// .section1c {@include sec-default ();background-color: $blue;height: auto;}
 
-	.section1b {
-		@include sec-default ();
-		background-color: $white;
-		@include sec-bgimage();
-		background-position: top center;
-		background-image: url(image_path('ow-map.png'));
-		height: 300px;
+	// .section1b {
+	// 	@include sec-default ();
+	// 	background-color: $white;
+	// 	@include sec-bgimage();
+	// 	background-position: top center;
+	// 	background-image: url(image_path('ow-map.png'));
+	// 	height: 300px;
 
-		.inside {
-			@include sec-default ();
-			height:100%;
-			background-color: rgba($white, .94);
-			@include sec-bgimage();
+	// 	.inside {
+	// 		@include sec-default ();
+	// 		height:100%;
+	// 		background-color: rgba($white, .94);
+	// 		@include sec-bgimage();
 
-			h2.header {font-weight: 800; text-transform: uppercase;padding-bottom:40px;text-align: center;}
-			h4 {}
-			// background-image: url(image_path('paper-map.png'));
-			// background-image: url(image_path('map-bg2.png'));
-		}
-	}
+	// 		h2.header {font-weight: 800; text-transform: uppercase;padding-bottom:40px;text-align: center;}
+	// 		h4 {}
+	// 	}
+	// }
 
 	.section2 {
 		@include sec-default ();
@@ -76,4 +106,11 @@
 		}
 	}
 
+}
+
+.contact {
+	.contact-hero {height:200px;
+		.hero-container {padding-top:15%;}
+	}
+	.contact-info {@include sec-default (); background-color: $white; margin-top: 150px; padding: 50px 0;}
 }

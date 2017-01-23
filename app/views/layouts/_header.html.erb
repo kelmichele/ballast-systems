@@ -1,5 +1,5 @@
 <header class="header">
-  <div class="top-bar">
+  <!-- <div class="top-bar">
     <div class="container">
       <div class="col-md-6">
         <%= mail_to "info@ballasttreatmentsystems.com", encode: "hex", class: 'email' do %>
@@ -8,20 +8,34 @@
       </div>
 
       <div class="col-md-3 col-md-offset-3 col-xs-12">
-          <!-- <p><%= Date.current %></p> -->
+          <p><%= Date.current %></p>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <div class="main-header">
     <div class="container">
 	    <div class="col-md-3 logo-block">
-        <!-- <%= link_to(image_tag( 'ballast-logo-v.png', alt: 'Ballast Treatment Systems Logo', class: 'img-responsive logo-img-v'), root_path ) %>  -->
 	      <%= link_to(image_tag( 'ballast-logo-h.png', alt: 'Ballast Treatment Systems Logo', class: 'img-responsive logo-img'), root_path ) %>
 	    </div>
 
 	    <div class="col-md-9 mega-tab">
+        <div class="top-bar">
+          <div class="col-md-6 col-md-offset-6">
+              <div class="col-md-6">
+                <%= number_to_phone(2514068629 ,pattern: /(\d{3})(\d{3})(\d{4})$/,delimiter: ".", class: 'tel') %>
+              </div>
+              <div class="col-md-6">
+                <%= mail_to "info@ballasttreatmentsystems.com", encode: "hex", class: 'email' do %>
+                  info@ba<span style="display:none">hexscramblewords</span>llasttreatmentsystems.com
+                <% end %>
+              </div>
+          </div>
+        </div>
+
 	        <ul class="megamenu-parent menu-zoom hidden-xs">
+              <li class="menu-item"><%= link_to "Home", root_path %></li>
+              <li class="menu-item"><%= link_to "Contact", contact_path %></li>
 	        </ul>
 	    </div>
     <div>
@@ -36,3 +50,4 @@
 <!-- Date.strptime('03-02-2001', '%d-%m-%Y') -->
 
 <!-- <img src="large-image.jpg" width="782" height="2000" alt="Big Image" /> -->
+<!-- Phone # (251) 406-8629 -->
