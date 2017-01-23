@@ -23,6 +23,7 @@
 		height:100%;
 		background-color: rgba($white, .92);
 		@include sec-bgimage();
+		padding: 20px 0;
 
 		h2.header {font-weight: 800; text-transform: uppercase;padding-bottom:40px;text-align: center;}
 	}
@@ -71,6 +72,8 @@
 		}
 	}
 
+	.section1b { h3 {margin-top: 0;}}
+
 	.section2 {
 		@include sec-default ();
 		background-color: $blue;
@@ -92,7 +95,17 @@
 	.section1b .inside {background-color: rgba($white, .9);}
 	.section1c {background-color: $dk-blue;}
 
-	h3 { color: $dk-blue; line-height: 1.3em;
+	h3 { color: $dk-blue; line-height: 1.3em; margin-bottom: 45px; margin-top: 0;
 		span {font-style: italic;font-weight: 800;}
+	}
+
+	.contact-info {
+		.phone, .email { color: $lt-blue; font-weight: bold; font-size: 16px;}
+		h4 {text-align: center; margin-top:5px; margin-bottom:15px;}
+	}
+
+	.formsec {
+		input, textarea {background-color: $offwhite; border: 1px solid #ededed; padding: 4px 10px; width:80%; @include center-block(); margin-bottom:10px;}
+		input.send-message {background-color: $blue; width: 40%; color: $white; border-radius: 4px; font-weight: bold; margin-bottom: 0;}
 	}
 }

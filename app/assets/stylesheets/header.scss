@@ -1,35 +1,37 @@
 @import "variables";
 @import "mixins";
 
-header { @include sec-default();}
-
-.top-bar {@include sec-default();  padding:5px; color: $white;}
-.logo-img {max-width: 200px; padding:10px 0;}
-header ul { float: right;
-  li { display: inline-block; margin-left: 30px; margin-top: 20px;}
-}
-
 header {
   @include sec-default();
   position: fixed;
-  padding-top:20px;
   width: 100%;
-  // text-align: center;
   height: auto;
   background: transparent;
-  color: $white;
   transition: all 0.4s ease;
   z-index: 9999;
 
   &.sticky {
     @include sec-default();
-    padding-top:0px;
-    height: 85px;
+    height: auto;
     background: rgba($offwhite, .95);
     text-align: left;
-    padding-left: 20px;
+    padding: 10px 50px;
     border-bottom: 1px solid #ececec;
   }
+
+  ul {
+    li { display: inline-block; padding-top: 5px; }
+
+    &.contact-list {padding-left:0;
+      .phone {margin-right:20px;}
+      li a {color: $dk-blue}
+    }
+    &.megamenu-parent.menu-zoom { float: right;
+      .nav-link { font-size: 15px;margin-top: 10px;color: $dk-blue; text-transform: uppercase; font-weight: bold;margin-left: 30px;}
+    }
+  }
+
+  .logo-img {max-width: 200px; padding-top: 0px; margin: auto;}
 }
 
 
@@ -47,3 +49,14 @@ header {
     @include bp(md) {.logo-img {display: block;}}
   }
 }
+
+
+
+
+ // ul { padding-left:0;
+ //    li { display: inline-block; margin-left: 30px; padding-top: 5px; }
+
+ //    ul.megamenu-parent.menu-zoom { float: right;
+ //      .nav-link { font-size: 15px;margin-top: 10px;color: $dk-blue; text-transform: uppercase; font-weight: bold;}
+ //    }
+ //  }

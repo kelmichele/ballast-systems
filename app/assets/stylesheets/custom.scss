@@ -36,11 +36,15 @@ a:hover {text-decoration: none;}
 
 footer {
 	@include sec-default(); background-color: $dk-blue; padding:15px;
-	color: $white;
+	ul li {display: inline-block; margin-right: 25px;
+		.ft-nav{color: $white; font-size: 15px;}
+	}
+
+	p.copyright {float: right; color: $white;}
 }
 
 
-h1, h2, h3, h4, h5, p {line-height: 1.5em; font-family: $open;}
+h1, h2, h3, h4, h5, p, a, li {line-height: 1.5em; font-family: $open;}
 h1 {font-size: 40px;}
 h2 {font-size: 25px;}
 h3 {font-size: 22px;}
