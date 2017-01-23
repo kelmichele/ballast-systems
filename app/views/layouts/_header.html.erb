@@ -18,11 +18,21 @@
 	    </div>
 
 	    <div class="col-md-4 mega-tab">
-          <ul class="megamenu-parent menu-zoom">
+          <ul class="megamenu-parent menu-zoom hidden-xs">
               <li class="menu-item"><%= link_to "Home", root_path, class: 'nav-link' %></li>
+              <li class="menu-item"><%= link_to "Services", services_path, class: 'nav-link' %></li>
               <li class="menu-item"><%= link_to "Get in Touch", contact_path, class: 'nav-link' %></li>
 	        </ul>
       </div>
     </div>
+  </div>
+
+  <div>
+    <a href="#" id="offcanvas-toggler">
+        <span></span>
+        <span></span>
+        <span></span>
+        <!-- <h3>Main Menu</h3> -->
+    </a>
   </div>
 </header>

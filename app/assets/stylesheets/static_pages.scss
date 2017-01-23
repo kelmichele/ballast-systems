@@ -109,3 +109,11 @@
 		input.send-message {background-color: $blue; width: 40%; color: $white; border-radius: 4px; font-weight: bold; margin-bottom: 0;}
 	}
 }
+
+.services {
+	.services-hero {height:350px;
+		.hero-container {padding-top:15%;}
+		h1 {font-weight: 800; color: $blue; text-transform: uppercase;}
+	}
+	.section1c {background-color: $dk-blue;}
+}

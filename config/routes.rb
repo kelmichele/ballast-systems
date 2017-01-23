@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
+  get '/services', to: 'static_pages#services'
 
  	get '/contact', to: 'contact#new', as: 'contact'
   post '/contact', to: 'contact#create'

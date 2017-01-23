@@ -17,8 +17,8 @@ gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
-gem 'font-awesome-rails', '~> 4.6', '>= 4.6.3.1'
 gem 'actionview-encoded_mail_to'
+gem 'font-awesome-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
