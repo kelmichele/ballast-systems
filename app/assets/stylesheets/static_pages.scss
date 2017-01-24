@@ -26,6 +26,10 @@
 		padding: 20px 0;
 
 		h2.header {font-weight: 800; text-transform: uppercase;padding-bottom:40px;text-align: center;}
+
+		@include bp(tb) {padding:0 15px;
+			h2.header {padding-bottom: 10px;}
+		}
 	}
 }
 
@@ -33,7 +37,9 @@
 .home {
 	.home-hero {height:450px;
 		.hero-container {padding-top:15%;}
-		@include bp(md) { height: 300px;}
+		@include bp(md) { height: 150px;
+			.hero-container {padding-top:7%;}
+		}
 	}
 
 	.site-header {@include sec-default ();
@@ -41,35 +47,14 @@
 		h1 {display: inline-block; margin-left: 5px; font-family: $open; font-weight: 700; text-transform: uppercase; line-height: .8em; color: $dk-blue;
 			span {font-size: 22px; font-weight: normal; color: $lt-blue;}
 		}
+
+		@include bp(tb) { h1{margin-top: 4px;} }
 	}
 
 	.section1 {
 		@include sec-default ();
 		margin-top:-5%;
 		h2 {font-size: 30px; text-align: center;}
-
-		.ballast-block {
-			@include sec-default();
-			@include sec-bgimage();
-			background-image: url(image_path('shipping2.jpg'));
-			background-position: center center;
-			height:auto;
-			position: relative;
-			color:$white;
-			z-index: 0;
-
-			&::before {
-				content: '';
-				width: 100%;
-				height:100%;
-				background: rgba($dk-blue, .9);
-				position: absolute;
-				z-index: -1;
-				left: 0;
-			}
-
-			.inner {@include sec-default(); padding:20px 15px;}
-		}
 	}
 
 	.section1b { h3 {margin-top: 0;}}
@@ -82,6 +67,20 @@
 		.img-responsive {width: 100%;}
 		.whitebox {
 			background-color: $white; padding:15px;
+		}
+
+		@include bp(tb) {
+			.ship-bx { @include sec-default(); margin-bottom:20px; text-align: center;
+				.img-responsive, .whitebox {width: 45%;display: inline-block;float: left;}
+				.whitebox {float: right; width:54%; margin-top: 15px; padding-bottom: 10px;}
+			}
+		}
+
+		@include bp(sm) {
+			.ship-bx {margin-bottom:10px;
+				.img-responsive, .whitebox { @include sec-default();}
+				.whitebox {margin-top: 10px}
+			}
 		}
 	}
 }
@@ -115,7 +114,9 @@
 	.services-hero {height:300px;
 		.hero-container {padding-top:10%;}
 		h1 {font-weight: 800; color: $blue; text-transform: uppercase;}
-		@include bp(md) { height: 200px;}
+		@include bp(tb) { height: 120px;
+			.hero-container {padding-top:3%;}
+		}
 	}
 	.section1c {background-color: $dk-blue;}
 
@@ -123,7 +124,7 @@
 	.serve { padding: 5px 10px;
 		h3 {color: $lt-blue; font-weight: bold; margin-top:0; margin-bottom: 5px; text-transform: uppercase;}
 
-		@include bp(md) {padding: 5px 0px 0;
+		@include bp(tb) {padding: 5px 0px 0;
 			h3 {font-size: 16px; }
 		}
 	}
@@ -131,6 +132,10 @@
 	.section1b { background-repeat: repeat;
 		.inside.bl {background-color: lighten($blue, 15%); p {color: $white;}
 			h3 {color: $dk-blue;}
+		}
+
+		@include bp(tb) {
+			.inside {padding: 20px;}
 		}
 	}
 }

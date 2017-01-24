@@ -46,12 +46,13 @@ header {
 }
 
 
-@include bp(md) {
+@include bp(tb) {
   header, header.sticky, .home header {position: relative; padding: 0 0 5px; height:auto; background-color: rgba($white, .8);
-    ul.contact-list {@include sec-default(); padding: 0 15px;
+    ul.contact-list {@include sec-default(); border-bottom: 1px solid #dfdfdf; margin-bottom: 15px;
       // border-bottom: 1px solid $dk-blue;
-      .phone {width: auto; float: left;}
-      .email {width: auto; float: right;}
+      li {padding: 5px 15px;}
+      .phone {width: 40%; float: left; margin-right: 0;}
+      .email {width: 40%; float: right;}
     }
   }
 }
