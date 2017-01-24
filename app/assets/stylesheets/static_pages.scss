@@ -44,7 +44,7 @@
 
 	.site-header {@include sec-default ();
 		.anchor {width: 45px; display: inline-block;float: left;}
-		h1 {display: inline-block; margin-left: 5px; font-family: $open; font-weight: 700; text-transform: uppercase; line-height: .8em; color: $dk-blue;
+		h1 {display: inline-block; margin-left: 5px; margin-top:8px; font-weight: 700; text-transform: uppercase; line-height: .8em; color: $dk-blue;
 			span {font-size: 22px; font-weight: normal; color: $lt-blue;}
 		}
 
