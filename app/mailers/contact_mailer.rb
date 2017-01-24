@@ -7,7 +7,8 @@ class ContactMailer < ApplicationMailer
     @contact = contact
 
     mail subject: "Contact Form Inquiry from the Ballast Treatments site"
-    mail to: "kelli@hsdesignhouse.com"
+    # mail to: "kelli@hsdesignhouse.com"
+    mail to: "info@ballasttreatmentsystems.com"
   end
 
 end

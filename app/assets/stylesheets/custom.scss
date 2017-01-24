@@ -54,7 +54,7 @@ body{margin-top:-20px;}
 }
 
 footer {
-	@include sec-default(); background-color: $dk-blue; padding:15px;
+	@include sec-default(); background-color: $dk-blue; padding:15px 15px 0;
 	ul li {display: inline-block; margin-right: 25px;
 		.ft-nav{color: $white; font-size: 15px;}
 	}

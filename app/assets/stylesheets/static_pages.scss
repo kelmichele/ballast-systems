@@ -66,7 +66,7 @@
 
 		.img-responsive {width: 100%;}
 		.whitebox {
-			background-color: $white; padding:15px;
+			background-color: $white; padding:15px 15px 10px; text-align: center;
 		}
 
 		@include bp(tb) {
@@ -91,7 +91,7 @@
 		h1 {font-weight: 800; color: $blue; text-transform: uppercase;}
 		@include bp(md) { height: 200px;}
 	}
-	// .contact-info {@include sec-default (); background-color: $white; margin-top: 150px; padding: 50px 0;}
+
 	.section1b .inside {background-color: rgba($white, .9);}
 	.section1c {background-color: $dk-blue;}
 
@@ -101,7 +101,7 @@
 
 	.contact-info {
 		.phone, .email { color: $lt-blue; font-weight: bold; font-size: 16px;}
-		h4 {text-align: center; margin-top:5px; margin-bottom:15px;}
+		h4 { margin-top:5px; margin-bottom:15px;}
 	}
 
 	.formsec {
