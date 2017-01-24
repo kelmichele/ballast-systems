@@ -1,7 +1,7 @@
 <header class="header">
   <div class="main-header">
     <div class="container no-padding">
-      <div class="col-md-4">
+      <div class="col-md-4 col-xs-12 contact-links">
           <ul class="contact-list">
             <li class="phone"><%= number_to_phone(2514068629 ,pattern: /(\d{3})(\d{3})(\d{4})$/,delimiter: "-", class: 'tel') %></li>
 
@@ -13,11 +13,11 @@
           </ul>
       </div>
 
-	    <div class="col-md-4 logo-block">
+	    <div class="col-md-4 col-xs-12 logo-block">
 	      <%= link_to(image_tag( 'ballast-logo-h.png', alt: 'Ballast Treatment Systems Logo', class: 'img-responsive logo-img'), root_path ) %>
 	    </div>
 
-	    <div class="col-md-4 mega-tab">
+	    <div class="col-md-4 col-xs-12 mega-tab">
           <ul class="megamenu-parent menu-zoom hidden-xs">
               <li class="menu-item"><%= link_to "Home", root_path, class: 'nav-link' %></li>
               <li class="menu-item"><%= link_to "Services", services_path, class: 'nav-link' %></li>

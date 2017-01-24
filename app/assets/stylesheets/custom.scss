@@ -22,7 +22,7 @@ a:hover {text-decoration: none;}
 	.no-lpadding-xs {padding-left:0;}
 	.no-rpadding-xs {padding-right:0;}
 }
-
+body{margin-top:-20px;}
 .main {
 	@include sec-default();@include sec-bgimage(); background-image: url(image_path('cargo3-bw.jpg'));background-position: center center; font-size: 15px;
 	background-attachment: fixed;

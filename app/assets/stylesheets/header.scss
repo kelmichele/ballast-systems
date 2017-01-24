@@ -4,6 +4,7 @@
 header {
   @include sec-default();
   position: fixed;
+  top:0;
   width: 100%;
   height: auto;
   background: transparent;
@@ -11,11 +12,11 @@ header {
   z-index: 9999;
 
   &.sticky {
-    @include sec-default();
-    height: auto;
+    // @include sec-default();
+    // height: auto;
+    // text-align: left;
     background: rgba($offwhite, .95);
-    text-align: left;
-    padding: 10px 50px;
+    padding: 10px 0;
     border-bottom: 1px solid #ececec;
   }
 
@@ -34,18 +35,32 @@ header {
   .logo-img {max-width: 200px; padding-top: 0px; margin: auto;}
 }
 
-
-@include bp(md) {
-  header, header.sticky {position: relative; transition: none; height:auto; background-color: rgba($white, .8);}
-
-}
-
 .home {
   header {
     .logo-img {display: none;}
     &.sticky .logo-img {display: block;}
 
     @include bp(md) {.logo-img {display: block;}}
+  }
+}
+
+
+@include bp(md) {
+  header, header.sticky, .home header {position: relative; padding: 0 0 5px; height:auto; background-color: rgba($white, .8);
+    ul.contact-list {@include sec-default(); padding: 0 15px;
+      // border-bottom: 1px solid $dk-blue;
+      .phone {width: auto; float: left;}
+      .email {width: auto; float: right;}
+    }
+  }
+}
+
+@include bp(sm) {
+  header, header.sticky, .home header {
+    ul.contact-list { text-align: center; padding-bottom: 5px;
+      .phone {width: auto; @include center-block();}
+      .email {width: auto; @include center-block();}
+    }
   }
 }
 
@@ -74,17 +89,13 @@ header {
 .close-offcanvas:hover{background:$black; color:$white}
 .offcanvas-menu .menu ul li{position:relative;}
 
-.offcanvas-menu{width:280px; height:100%; background:darken($dk-blue, 10%); color:$white; position:fixed; top:0; opacity:0; z-index:9999; overflow-y:scroll;
+.offcanvas-menu{width:250px; height:100%; background:darken($dk-blue, 10%); color:$white; position:fixed; top:0; opacity:0; z-index:9999; overflow-y:scroll;
     .offcanvas-inner{padding:20px;}
     .module{margin-top:20px;
         ul{margin:0 -20px;width: 100%; float: left;
-            li { width: 100%; float: left; margin-bottom:15px; padding-bottom:5px; padding-left: 15px; border-bottom:1px solid rgba($white, .4);display: block;
-                a { -webkit-transition:300ms; -o-transition:300ms; transition:300ms; padding:7px 0; padding-left:0px; color: $white; font-size: 14px; line-height: 1.5em;}
-                a:hover{background:transparent;}
-                &:first-child{margin-top:0}
-                // &.has-child{border-bottom: none; padding-bottom: 0;
-                //     .mom {color: $lt-blue}
-                // }
+            li { @include sec-default(); margin-bottom:15px; padding-bottom:5px; border-bottom:1px solid rgba($white, .2);display: block;
+              &:last-child{border-bottom: none;}
+                a { -webkit-transition:300ms; -o-transition:300ms; transition:300ms; padding:7px 0; padding-left:0px; color: $white; font-size: 15px; line-height: 1.5em;}
             }
         }
     }
@@ -92,7 +103,7 @@ header {
 
 .offcanvas-menu{-webkit-transition:opacity 400ms cubic-bezier(0.7,0,0.3,1),right 400ms cubic-bezier(0.7,0,0.3,1); transition:opacity 400ms cubic-bezier(0.7,0,0.3,1),right 400ms cubic-bezier(0.7,0,0.3,1)}
 .body-innerwrapper:after{right:0}
-.offcanvas-menu{right:-280px}
+.offcanvas-menu{right:-250px}
 .offcanvas .offcanvas-menu{right:0}
 .body-innerwrapper:after{position:absolute; top:0; width:0; height:0; background:rgba($black, 0.8); content:''; opacity:0; -webkit-transition:opacity 0.5s,width 0.1s 0.5s,height 0.1s 0.5s; transition:opacity 0.5s,width 0.1s 0.5s,height 0.1s 0.5s; z-index:999}
 .offcanvas{width:100%; height:100%; position:relative}
@@ -102,9 +113,7 @@ header {
 h3.module-title{color: $white;}
 .menu .nav-child.small{font-size:inherit}
 
-.header-mobtn {display: none;}
 @include bp(md) {
   .mega-tab, .megamenu-parent {display: none;}
   #offcanvas-toggler {display: block}
-  .menu span.toggle-icon.fa {display:inline-block;font-family:FontAwesome;font-size:15px;position:absolute; float:right; color: $dark; background-color: $white; padding: 0px 4px; margin-top: 2px; margin-left: 5px; font-weight: 700;}
 }
