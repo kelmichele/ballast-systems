@@ -33,6 +33,25 @@ body{margin-top:-20px;}
 }
 // .main {@include sec-default(); padding:40px 0;}
 
+.scroll-up {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 15px;
+    right: 100px;
+    display: none;
+    text-indent: -9999px;
+    background-image: url(image_path('to-top.png'));
+    background-repeat: no-repeat;
+    background-color: $dark;
+    z-index: 100;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+
+    @include bp(tb) { right: 30px; }
+    @include bp(sm) { right: 15px; }
+}
 
 footer {
 	@include sec-default(); background-color: $dk-blue; padding:15px;

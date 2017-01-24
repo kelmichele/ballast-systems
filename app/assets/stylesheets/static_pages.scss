@@ -112,30 +112,25 @@
 }
 
 .services {
-	.services-hero {height:350px;
-		.hero-container {padding-top:15%;}
+	.services-hero {height:300px;
+		.hero-container {padding-top:10%;}
 		h1 {font-weight: 800; color: $blue; text-transform: uppercase;}
 		@include bp(md) { height: 200px;}
 	}
 	.section1c {background-color: $dk-blue;}
 
-	.serve { @include sec-default(); padding: 5px 10px;
-		h4 {color: $lt-blue; font-weight: bold;}
-		h4::before {
-			content: '';
-			width:15px;
-			height:30px;
-			@include sec-bgimage();
-			background-image: url(image_path('anchor-sm.png'));
-			position: absolute;
-			left:0;
-			margin-top:5px;
-		}
-		p {color: $dk-blue; margin-bottom: 5px; }
+	p {color: $dk-blue; margin-bottom: 5px; }
+	.serve { padding: 5px 10px;
+		h3 {color: $lt-blue; font-weight: bold; margin-top:0; margin-bottom: 5px; text-transform: uppercase;}
 
-		&.type h4 {margin-bottom: 0;}
 		@include bp(md) {padding: 5px 0px 0;
-			h4 {font-size: 16px; padding-left:3px;}
+			h3 {font-size: 16px; }
+		}
+	}
+
+	.section1b { background-repeat: repeat;
+		.inside.bl {background-color: lighten($blue, 15%); p {color: $white;}
+			h3 {color: $dk-blue;}
 		}
 	}
 }

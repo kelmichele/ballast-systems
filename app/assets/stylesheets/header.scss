@@ -10,6 +10,7 @@ header {
   background: transparent;
   transition: all 0.4s ease;
   z-index: 9999;
+  padding-top: 5px;
 
   &.sticky {
     // @include sec-default();
