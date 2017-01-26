@@ -12,6 +12,19 @@ header {
   z-index: 9999;
   padding-top: 5px;
 
+  ul {
+    li { display: inline-block; padding-top: 5px; }
+    a {color: $white; }
+    &.contact-list {padding-left:0;}
+    .phone {margin-right:20px; color: $white;}
+
+    &.megamenu-parent.menu-zoom { float: right;
+      .nav-link { font-size: 15px;margin-top: 10px;text-transform: uppercase; font-weight: bold;margin-left: 30px;}
+    }
+  }
+
+  .logo-img {max-width: 200px; padding-top: 0px; margin: auto;}
+
   &.sticky {
     // @include sec-default();
     // height: auto;
@@ -19,21 +32,10 @@ header {
     background: rgba($offwhite, .95);
     padding: 10px 0;
     border-bottom: 1px solid #ececec;
+
+    ul { a, .phone { color: $dk-blue}}
+
   }
-
-  ul {
-    li { display: inline-block; padding-top: 5px; }
-
-    &.contact-list {padding-left:0;
-      .phone {margin-right:20px;}
-      li a {color: $dk-blue}
-    }
-    &.megamenu-parent.menu-zoom { float: right;
-      .nav-link { font-size: 15px;margin-top: 10px;color: $dk-blue; text-transform: uppercase; font-weight: bold;margin-left: 30px;}
-    }
-  }
-
-  .logo-img {max-width: 200px; padding-top: 0px; margin: auto;}
 }
 
 .home {
